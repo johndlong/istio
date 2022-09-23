@@ -53,6 +53,14 @@ pilot:
 
   plugins: []
 
+  # The following is used to set a time in which the pilot instances
+  # will ping the sidecars if there is no activity to see if the transport
+  # is still alive.
+  keepaliveInterval: 30s
+
+  # The following is used to set the timeout value for any keepalive check.
+  keepaliveTimeout: 10s
+
   # The following is used to limit how long a sidecar can be connected
   # to a pilot. It balances out load across pilot instances at the cost of
   # increasing system churn.
